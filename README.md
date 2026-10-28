@@ -1,0 +1,1 @@
+TLS và SSL chưa thực hiện, do các lần thử trước sau khi cài ssl thì keystone không kết nối được database dù đúng mật khẩu
