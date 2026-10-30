@@ -6,7 +6,7 @@ bindaddress $manage_ip
 allow $manage_cidr
 ```
 
-# II. Database
+# II. Database (CHƯA THÀNH CÔNG)
 Cấu hình thêm mã hoá TLS cho database
 ```bash
 [mysqld]

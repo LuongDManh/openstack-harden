@@ -1,9 +1,10 @@
-# Thông số mạng các node:
+# Cấu hình mạng các node:
 
 ### Controller:
 a) 10.0.0.11, management network
 b) 192.168.1.0/24, không set ip, giao toàn bộ cho Neutron
 c) 10.0.1.11, storage network
+d) 10.0.2.11, dmz network
 
 ### Compute:
 a) 10.0.0.21, management network
@@ -15,5 +16,5 @@ a) 10.0.0.31, management network
 b) 10.0.1.31, storage network
 
 ### Proxy:
-a) 192.168.1.60, public network cho public API
-b) 10.0.0.2, management network
+a) 192.168.1.60, public network nhận req từ public
+b) 10.0.2.10, dmz network

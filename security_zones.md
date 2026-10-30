@@ -31,10 +31,11 @@ Instance
 
 # III. Phân chia network
 Đề xuất: 
-#### 3 NICs cho controller:
+#### 4 NICs cho controller:
 1. Management network: NAT, chỉ phục vụ các lưu lượng thuộc management plane.
 2. Provider network: có kết nối internet, phục vụ mạng provider do Neutron quản lý.
 3. Storage network: phục vụ API, tiến trình điều khiển cho storage
+4. Dmz network: nhận request từ proxy, DNAT cho card manage
 #### 3 NICs cho compute:
 1. Management network
 2. Provider network
@@ -44,7 +45,7 @@ Instance
 2. Storage network
 #### 2 NICs cho proxy node:
 1. Public network: có internet, mã hoá tls, api public chỉ gán trên mạng này
-2. Management network: như controller
+2. Dmz network: nhận req từ card public (qua reverse proxy), chuyển sang dmz của controller
 
 # IV. Tiến trình
 Cô lập các tiến trình, đề xuất cô lập dựa trên network mà các tiến trình sử dụng. Ưu tiên sử dụng giải pháp cô lập sẵn có: Ansible Lxc.
